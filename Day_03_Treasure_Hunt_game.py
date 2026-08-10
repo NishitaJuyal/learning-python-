@@ -22,20 +22,20 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
-way = input("where do you wanna go left or right? ")
-if way == "left" or way == "Left":
+way = input("where do you wanna go left or right? ").lower()
+if way == "left":
     print("You found a river")
-    stop_1 = input("do you wanna swim through it or wait for a boat ")
-    if stop_1 == "wait" or stop_1 == "Wait":
+    stop_1 = input("do you wanna swim through it or wait for a boat ").lower()
+    if stop_1 == "wait":
         print("You got three doors Red , Yellow and Blue")
-        stop_2 = input("which door you wanna choose red, yellow or blue ")
+        stop_2 = input("which door you wanna choose red, yellow or blue ").lower()
         if stop_2 == "yellow":
             print("Congratulations! You won the treasure!")
-        elif stop_2 == "red" or stop_2 == "blue" or stop_2 == "Red" or stop_2 == "Blue":
-            print("Sorry you chose the wrong door, you lost the treasure!")
+        elif stop_2 == "red" or stop_2 == "blue":
+            print("Sorry you chose the wrong door, you lost the treasure!, GAME OVER!")
     else:
-        print("Sorry you got eaten by the crocodile, you lost the treasure!")
-elif way == "right" or way == "Right":
-    print("Sorry, you lost the treasure!")
+        print("Sorry you got eaten by the crocodile, you lost the treasure!, GAME OVER!")
+elif way == "right":
+    print("Sorry, you lost the treasure!, GAME OVER!")
 else:
     print("You entered the wrong input")
